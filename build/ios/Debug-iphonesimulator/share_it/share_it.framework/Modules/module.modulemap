@@ -1,0 +1,11 @@
+framework module share_it {
+  umbrella header "share_it-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module share_it.Swift {
+    header "share_it-Swift.h"
+    requires objc
+}
