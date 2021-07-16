@@ -218,24 +218,3 @@ List accountList = [
   "Privacy Settings",
   "Logout"
 ];
-
-List storeList = [
-  {
-    "img":
-        "https://images.unsplash.com/photo-1477901492169-d59e6428fc90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "name": "7Makara, Phnom Penh",
-    "open": 1
-  },
-  {
-    "img":
-        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "name": "Toulkok, Phnom Penh",
-    "open": 0
-  },
-  {
-    "img":
-        "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "name": "BKK, Phnom Penh",
-    "open": 1
-  },
-];

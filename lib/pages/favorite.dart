@@ -11,8 +11,8 @@ class FavoritePage extends StatefulWidget {
 
 class _FavoritePageState extends State<FavoritePage> {
   List posts = [
-    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
-      "image" : "https://images.unsplash.com/photo-1523497894237-6809839f72dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "1Take me to your heart, Take me to your heart, Take me to your heart, Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1523497894237-6809839f72dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
     {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
     "image" : "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjd8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
     {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
@@ -55,16 +55,13 @@ class _FavoritePageState extends State<FavoritePage> {
                   return 
                     Column(
                       children: <Widget>[
-                          SizedBox(
-                          height: 50,
-                        ),
+                        SizedBox(height: 50,),
                         Padding(
                           padding: const EdgeInsets.only(left: 15, right: 15),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("Favorites",
-                                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+                              Text("Favorites", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
                             ],
                           ),
                         ),
@@ -78,12 +75,10 @@ class _FavoritePageState extends State<FavoritePage> {
               );
   }
 
-  Widget blockHead(){
-
-  }
-
   Widget slidePost(post, index){
     return 
+    Column(
+      children:[
       Slidable(
         actionPane: SlidableDrawerActionPane(),
         actionExtentRatio: 0.25,
@@ -109,20 +104,10 @@ class _FavoritePageState extends State<FavoritePage> {
                                       ),
                                     ),
                           SizedBox(width: 15,),
-                          Flexible(
-                            // child: Padding(
-                            //   padding: EdgeInsets.only(left: 7),
-                            //   child: Text(post['title'],
-                            //             style: TextStyle(
-                            //               fontWeight: FontWeight.w500, fontSize: 16, color: black, 
-                            //             ),
-                            //             maxLines: 3,
-                            //             overflow: TextOverflow.ellipsis),
-                            // )
+                          Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-
                                 Text(
                                   post['title'],
                                   maxLines: 2,
@@ -143,9 +128,13 @@ class _FavoritePageState extends State<FavoritePage> {
                               ],
                             ),
                           ),
+                          // IconButton(icon: Icon(Icons.close, color: grey,), 
+                          //   onPressed: (){
+                            
+                          //   }
+                          // )
                         ],
                       ),
-                  Divider(color: grey) 
                 ],
               ),
             )
@@ -167,7 +156,9 @@ class _FavoritePageState extends State<FavoritePage> {
             onTap: () => {},
           ),
         ],
-      );
+      ),
+      Divider(color: grey,)
+    ]);
   }
 
 }

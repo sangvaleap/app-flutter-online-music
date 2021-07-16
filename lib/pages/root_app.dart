@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_music_player/json/constant.dart';
+import 'package:online_music_player/pages/account.dart';
 import 'package:online_music_player/pages/playing.dart';
 import 'package:online_music_player/theme/colors.dart';
 import 'favorite.dart';
@@ -29,7 +30,7 @@ class _RootAppState extends State<RootApp> {
         PlayingPage(),
         HomePage(),
         FavoritePage(),
-        HomePage(),
+        AccountPage(),
       ],
     );
   }
