@@ -61,7 +61,7 @@ class _AccountPageState extends State<AccountPage> {
                       Text(
                         "Sangvaleap Vanny",
                         maxLines: 1,
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                         overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(

@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
-const String APP_TITLE = 'SHOP UI';
-const String homeImg =
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';
-
-const String profileUrl =
-    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
+const String APP_TITLE = 'The Music';
+const PLAYING_BG = [0xFFDB4437, 0xFFfbced1];
+// const PLAYING_BG = [0xFF111111, 0xFFfcccccc];
 
 const List<Map<String, Object>> categories = [
   {
@@ -39,14 +36,12 @@ const List<Map<String, Object>> theHits = [
   {
     'title': 'The Star',
     'singer': 'Summuel',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1570915226741-cc7d678ad7ce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
+    'imgUrl':'https://images.unsplash.com/photo-1570915226741-cc7d678ad7ce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
   },
   {
     'title': 'Rock',
     'singer': 'Sonny',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
+    'imgUrl':'https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
   },
   {
     'title': 'New Version',
@@ -106,115 +101,56 @@ const List<String> slider = [
   'https://images.unsplash.com/photo-1513829596324-4bb2800c5efb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60'
 ];
 
-const List<Map<String, Object>> explores = [
-  {
-    'title': 'Jackets',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Coats',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1520012218364-3dbe62c99bee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Accessories',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1509741102003-ca64bfe5f069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Demin',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1548435407-2d408a5f0aa3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Handbag',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1524498250077-390f9e378fc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  },
-  {
-    'title': 'Hat',
-    'imgUrl':
-        'https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-  }
-];
-
-const List<Map<String, Color>> colors = [
-  {'title': Colors.green},
-  {'title': Colors.blue},
-  {'title': Colors.orange},
-  {'title': Colors.black},
-];
-
-const List<Map<String, Object>> sizes = [
-  {'title': 'S'},
-  {'title': 'M'},
-  {'title': 'L'},
-  {'title': 'XL'},
-  {'title': 'XXL'},
-];
-
-const List productDetail = [
-  'https://images.unsplash.com/photo-1565155003033-252a7073802c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-  'https://images.unsplash.com/photo-1545911825-6bfa5b0c34a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1572112686886-5c0b5bc8dacd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-  'https://images.unsplash.com/photo-1582041148887-67274b989ae3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
-];
-
-const List brands = ['Adidas', 'Bershka', 'Converse', 'Diesel'];
-
-const List historySearches = [
-  'Red Sunglasses',
-  'Large T-Shirt',
-  'Jaws Hoodie',
-  'Blue Sweater',
-  'Levi’s Jeans'
-];
-
-const List cartList = [
-  {
-    "img":
-        "https://images.unsplash.com/photo-1562572159-4efc207f5aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "name": "Snoopy T-shirt",
-    "ref": "04559812",
-    "price": "\$35",
-    "size": "S"
-  },
-  {
-    "img":
-        "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-    "name": "American",
-    "ref": "04459811",
-    "price": "\$50",
-    "size": "M"
-  },
-];
-
-List menusMore = [
-  "Home",
-  "Explore",
-  "Stores",
-  "Cart",
-  "Notifications",
-  "Loyalty Card",
-  "My orders"
-];
-
 List itemsTab = [
   {"icon": Icons.library_music, "size": 28.0},
+  {"icon": Icons.explore, "size": 28.0},
   {"icon": Icons.play_circle_filled, "size": 28.0},
-  {"icon": Icons.shop, "size": 28.0},
   {"icon": Icons.favorite, "size": 28.0},
   {"icon": Icons.person, "size": 28.0},
 ];
 
-List accountList = [
-  "Account Details",
-  "Loyalty card & offers",
-  "Notifications",
-  "Delivery Information",
-  "Payment Information",
-  "Language",
-  "Privacy Settings",
-  "Logout"
-];
+ List explores = [
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1523497894237-6809839f72dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjd8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1521417170173-29cd2de82858?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTQzfHxmYXNoaW9ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1561181110-9452af164099?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1570915226741-cc7d678ad7ce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1523497894237-6809839f72dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1608770764376-9c94a33959cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1567131308523-383d0fea9671?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"}
+  ];
+
+List favorites = [
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1523497894237-6809839f72dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjd8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1521417170173-29cd2de82858?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTQzfHxmYXNoaW9ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1561181110-9452af164099?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1570915226741-cc7d678ad7ce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1523497894237-6809839f72dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "Take me to your heart", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1608770764376-9c94a33959cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"},
+    {"title" : "I miss you like crazy", "singer" : "Jhonny Jason",
+    "image" : "https://images.unsplash.com/photo-1567131308523-383d0fea9671?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"}
+  ];

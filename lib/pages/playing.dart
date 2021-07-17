@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_music_player/json/constant.dart';
 import 'package:online_music_player/theme/colors.dart';
 
 class PlayingPage extends StatefulWidget {
@@ -9,63 +10,20 @@ class PlayingPage extends StatefulWidget {
 class _PlayingPageState extends State<PlayingPage> {
   var favoriteStar = false;
   var favoriteHeart = false;
+  
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     return 
     Scaffold(
       backgroundColor: white,
-      // appBar: AppBar(
-      //   backgroundColor: Colors.black,
-      //   flexibleSpace: Container(
-      //     decoration: BoxDecoration(
-      //       gradient: LinearGradient(
-      //         colors: [
-      //           Color(0xFF3AA575),
-      //           Color(0xFF4CD4A9),
-      //         ],
-      //       ),
-      //     ),
-      //   ),
-      //   elevation: 0.0,
-      //   title: Text('Now Playing'),
-      //   centerTitle: true,
-      //   leading: IconButton(
-      //     icon: Icon(
-      //       Icons.arrow_back_ios,
-      //       size: 15.0,
-      //     ),
-      //     onPressed: () {},
-      //   ),
-      //   actions: [
-      //     IconButton(
-      //       icon: Icon(Icons.share),
-      //       onPressed: () {},
-      //     ),
-      //     IconButton(
-      //       icon: Icon(favoriteStar ? Icons.star : Icons.star_border),
-      //       onPressed: () {
-      //         setState(() {
-      //           if (favoriteStar)
-      //             favoriteStar = false;
-      //           else
-      //             favoriteStar = true;
-      //         });
-      //       },
-      //     ),
-      //   ],
-      // ),
-      body: ListView(
-        children: <Widget>[
-          // SizedBox(height: 50,),
+      body: 
           Container(
-            height: height,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFFDB4437),
-                  Color(0xFFfbced1),
+                  Color(PLAYING_BG[0]),
+                  Color(PLAYING_BG[1]),
                 ],
               ),
             ),
@@ -85,7 +43,7 @@ class _PlayingPageState extends State<PlayingPage> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(25.0),
                         child: Image(
-                          image: Song().albumCover,
+                          image: Song().image,
                           fit: BoxFit.cover,
                           width: MediaQuery.of(context).size.width * .8,
                         ),
@@ -103,15 +61,26 @@ class _PlayingPageState extends State<PlayingPage> {
                             children: [
                               Text(
                                 Song().title,
-                                style:
-                                    TextStyle(color: Colors.white, fontSize: 25.0),
+                                style: TextStyle(color: Colors.white, fontSize: 25.0),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                Song().singer,
+                                style: TextStyle(
+                                  color: white.withOpacity(0.7),
+                                  fontSize: 16.0,
+                                ),
                               ),
                               IconButton(
                                 icon: Icon(
                                   favoriteHeart
                                       ? Icons.favorite
                                       : Icons.favorite_border,
-                                  color: Colors.white,
+                                  color: favoriteHeart ? primary : Colors.white,
                                 ),
                                 onPressed: () {
                                   setState(() {
@@ -121,17 +90,6 @@ class _PlayingPageState extends State<PlayingPage> {
                                       favoriteHeart = true;
                                   });
                                 },
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                Song().singerName,
-                                style: TextStyle(
-                                  color: white.withOpacity(0.7),
-                                  fontSize: 16.0,
-                                ),
                               ),
                             ],
                           ),
@@ -200,15 +158,13 @@ class _PlayingPageState extends State<PlayingPage> {
                 ]
               ), 
             ),
-          ),
-        ],
-      )
+          )
     );
   }
 }
 
 class Song {
-  String title = 'You Are Not Nlone';
-  String singerName = 'Michael Jackson';
-  AssetImage albumCover = AssetImage("assets/images/playing-bg.jpeg");
+  String title = 'You Are Not Alone';
+  String singer = 'Michael Jackson';
+  AssetImage image = AssetImage("assets/images/playing-bg.jpeg");
 }

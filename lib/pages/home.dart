@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget getBody() {
-    var size = MediaQuery.of(context).size;
     return ListView(
       padding: EdgeInsets.zero,
       children: [
@@ -30,7 +29,7 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Browse",
+              Text("Library",
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
             ],
           ),
@@ -72,8 +71,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         decoration: BoxDecoration(
                             image: DecorationImage(
-                                image:
-                                    NetworkImage(categories[index]['imgUrl']),
+                                image: NetworkImage(categories[index]['imgUrl']),
                                 fit: BoxFit.cover),
                             borderRadius: BorderRadius.circular(5)),
                       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_music_player/json/constant.dart';
 import 'package:online_music_player/pages/account.dart';
+import 'package:online_music_player/pages/explore.dart';
 import 'package:online_music_player/pages/playing.dart';
 import 'package:online_music_player/theme/colors.dart';
 import 'favorite.dart';
@@ -27,14 +28,13 @@ class _RootAppState extends State<RootApp> {
       index: activeTab,
       children: [
         HomePage(),
+        ExplorePage(),
         PlayingPage(),
-        HomePage(),
         FavoritePage(),
         AccountPage(),
       ],
     );
   }
-
 
   Widget getFooter() {
     return Container(
