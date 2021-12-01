@@ -5,25 +5,8 @@
 - [My Instagram](https://www.instagram.com/sangvaleap.v/)
 - My Email: sangvaleap.vanny@gmail.com
 
-![music-1](/uploads/23ecf9637ce35e181e43eba6128489b5/music-1.png)
-
-![music-2](/uploads/3d67fec0ad80dcecb000df3a62c0e513/music-2.png)
-
-![music-3](/uploads/5ac971dd6a7d08fcb665cbd39c115339/music-3.png)
-
-![music-4](/uploads/080c8116a952a6f58b5c24cb10c3f0b4/music-4.png)
-
-![music-5](/uploads/cc45611adb865f8426deb632eeb13d3e/music-5.png)
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="1236" alt="m1" src="https://user-images.githubusercontent.com/86506519/144240160-c3fca37c-1415-4471-b1a8-70e60887852d.png">
+<img width="1237" alt="m2" src="https://user-images.githubusercontent.com/86506519/144240166-629c2fb1-76db-4806-9785-d7df5d5343d0.png">
+<img width="1234" alt="m3" src="https://user-images.githubusercontent.com/86506519/144240188-d2810fc1-8f6d-43d2-aca3-afee8ad67a0b.png">
+<img width="1231" alt="m4" src="https://user-images.githubusercontent.com/86506519/144240194-0bfca55a-89e1-48e8-a72b-090eb43fe19d.png">
+<img width="1239" alt="m5" src="https://user-images.githubusercontent.com/86506519/144240201-3bc88307-99b5-49b6-9919-98b00f24a770.png">
